@@ -134,7 +134,7 @@ export function Module3() {
                     checked={highReadings}
                     onCheckedChange={(checked) => setHighReadings(!!checked)}
                   />
-                  <Label htmlFor="high" className="text-sm text-slate-700">>2 glucose readings >200 mg/dL</Label>
+                  <Label htmlFor="high" className="text-sm text-slate-700">&gt;2 glucose readings &gt;200 mg/dL</Label>
                 </div>
 
                 <div className="flex items-center space-x-2">
@@ -195,7 +195,7 @@ export function Module3() {
                 <div>
                   <h4 className="text-sm font-medium text-red-800">Adjustment Guidelines</h4>
                   <ul className="text-xs text-red-700 mt-1 space-y-1">
-                    <li>• Increase TDD by 20% if >2 readings >200 mg/dL</li>
+                    <li>• Increase TDD by 20% if &gt;2 readings &gt;200 mg/dL</li>
                     <li>• Decrease TDD by 20% if any reading &lt;70 mg/dL</li>
                     <li>• Review carbohydrate intake and timing</li>
                   </ul>

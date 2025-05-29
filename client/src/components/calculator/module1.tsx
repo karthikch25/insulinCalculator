@@ -162,7 +162,7 @@ export function Module1() {
                     checked={bmiOver30}
                     onCheckedChange={(checked) => setBmiOver30(!!checked)}
                   />
-                  <Label htmlFor="bmi" className="text-sm text-slate-700">BMI > 30</Label>
+                  <Label htmlFor="bmi" className="text-sm text-slate-700">BMI &gt; 30</Label>
                 </div>
 
                 <div className="flex items-center space-x-2">
