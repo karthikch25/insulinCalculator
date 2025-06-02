@@ -5,10 +5,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Module1 } from "@/components/calculator/module1";
 import { Module2 } from "@/components/calculator/module2";
 import { Module3 } from "@/components/calculator/module3";
+import { Module4 } from "@/components/calculator/module4";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 
-type ModuleType = "selection" | "module1" | "module2" | "module3";
+type ModuleType = "selection" | "module1" | "module2" | "module3" | "module4";
 
 export default function InsulinCalculator() {
   const [currentView, setCurrentView] = useState<ModuleType>("selection");
@@ -44,6 +45,16 @@ export default function InsulinCalculator() {
       color: "bg-red-500",
       borderColor: "border-red-200",
       bgColor: "bg-red-50"
+    },
+    {
+      id: "module4" as const,
+      title: "Correction Dose",
+      description: "Calculate insulin correction dose for current glucose levels",
+      subtitle: "For rapid glucose correction",
+      icon: Calculator,
+      color: "bg-purple-500",
+      borderColor: "border-purple-200",
+      bgColor: "bg-purple-50"
     }
   ];
 
@@ -153,6 +164,8 @@ export default function InsulinCalculator() {
         return <Module2 />;
       case "module3":
         return <Module3 />;
+      case "module4":
+        return <Module4 />;
       default:
         return null;
     }
